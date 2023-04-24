@@ -5,20 +5,27 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     //serialização: permite que uma variavel privada seja vista no inspetor
+
+    public GameObject laserPrefab;
+
     [SerializeField]
     private float velocidade = 5.0f;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         transform.position = new Vector3(0,0,0);
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         // obs: A cada frame, este codigo vai ser chamado
         Movement();
+
+        if (Input.GetKeyDown(KeyCode.Space)){
+            Instantiate(laserPrefab, transform.position + new Vector3(0, 0.88f, 0), Quaternion.identity);
+        }
     }
 
     private void Movement()
