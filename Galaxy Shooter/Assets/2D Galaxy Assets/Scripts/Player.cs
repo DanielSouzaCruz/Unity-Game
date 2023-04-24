@@ -8,6 +8,9 @@ public class Player : MonoBehaviour
 
     public GameObject laserPrefab;
 
+    public float fireRate = 0.25f;
+    public float nextFire = 0.0f;
+
     [SerializeField]
     private float velocidade = 5.0f;
 
@@ -23,8 +26,13 @@ public class Player : MonoBehaviour
         // obs: A cada frame, este codigo vai ser chamado
         Movement();
 
-        if (Input.GetKeyDown(KeyCode.Space)){
-            Instantiate(laserPrefab, transform.position + new Vector3(0, 0.88f, 0), Quaternion.identity);
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButton(0)){
+            if(Time.time > nextFire)
+            {
+              Instantiate(laserPrefab, transform.position + new Vector3(0, 0.88f, 0), Quaternion.identity); 
+              nextFire = Time.time + fireRate;  
+            }
+            
         }
     }
 
