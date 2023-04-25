@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
     //serialização: permite que uma variavel privada seja vista no inspetor
     [SerializeField]
     private GameObject _laserPrefab;
+    [SerializeField]
+    private GameObject _tripleShotPrefab;
 
     [SerializeField]
     private float _fireRate = 0.25f;
@@ -40,9 +42,7 @@ public class Player : MonoBehaviour
         if(Time.time > _nextFire)
             {
                 if(canTripleShot == true){
-                    Instantiate(_laserPrefab, transform.position + new Vector3(-0.55f, 0.06f, 0), Quaternion.identity);
-                    Instantiate(_laserPrefab, transform.position + new Vector3(0, 0.88f, 0), Quaternion.identity);
-                    Instantiate(_laserPrefab, transform.position + new Vector3(0.55f, 0.06f, 0), Quaternion.identity);
+                    Instantiate(_tripleShotPrefab, transform.position, Quaternion.identity);
                 }
                 else{
                     Instantiate(_laserPrefab, transform.position + new Vector3(0, 0.88f, 0), Quaternion.identity); 
