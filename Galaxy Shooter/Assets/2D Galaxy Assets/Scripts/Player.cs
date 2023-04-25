@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+
+    public bool canTripleShot = false;
     //serialização: permite que uma variavel privada seja vista no inspetor
     [SerializeField]
     private GameObject _laserPrefab;
@@ -37,8 +39,16 @@ public class Player : MonoBehaviour
     {
         if(Time.time > _nextFire)
             {
-              Instantiate(_laserPrefab, transform.position + new Vector3(0, 0.88f, 0), Quaternion.identity); 
-              _nextFire = Time.time + _fireRate;  
+                if(canTripleShot == true){
+                    Instantiate(_laserPrefab, transform.position + new Vector3(-0.55f, 0.06f, 0), Quaternion.identity);
+                    Instantiate(_laserPrefab, transform.position + new Vector3(0, 0.88f, 0), Quaternion.identity);
+                    Instantiate(_laserPrefab, transform.position + new Vector3(0.55f, 0.06f, 0), Quaternion.identity);
+                }
+                else{
+                    Instantiate(_laserPrefab, transform.position + new Vector3(0, 0.88f, 0), Quaternion.identity); 
+              
+                }
+                 _nextFire = Time.time + _fireRate; 
             }
     }
 
