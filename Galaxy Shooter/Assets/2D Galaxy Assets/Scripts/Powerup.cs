@@ -25,8 +25,9 @@ public class Powerup : MonoBehaviour
             // habilita o tiro triplo e verifica se o player foi achado
             if(player != null)
             {
-               player.canTripleShot = true; 
+               player.TripleShotPowerupOn();
             }
+
             // auto destruir
             Destroy(this.gameObject);  
         }
