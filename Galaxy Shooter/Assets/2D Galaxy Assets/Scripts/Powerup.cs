@@ -6,6 +6,9 @@ public class Powerup : MonoBehaviour
 {
     [SerializeField]
     private float _speed = 3.0f;
+
+    [SerializeField]
+    private int _powerupID;
     // Start is called before the first frame update
 
     // Update is called once per frame
@@ -25,7 +28,11 @@ public class Powerup : MonoBehaviour
             // habilita o tiro triplo e verifica se o player foi achado
             if(player != null)
             {
-               player.TripleShotPowerupOn();
+                if(_powerupID == 0)
+                {
+                  player.TripleShotPowerupOn();  
+                }
+               
             }
 
             // auto destruir
