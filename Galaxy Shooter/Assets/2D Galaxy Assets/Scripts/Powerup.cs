@@ -32,6 +32,10 @@ public class Powerup : MonoBehaviour
                 {
                   player.TripleShotPowerupOn();  
                 }
+                else if(_powerupID == 1)
+                {
+                  player.SpeedBoostPowerupOn();   
+                }
                
             }
 

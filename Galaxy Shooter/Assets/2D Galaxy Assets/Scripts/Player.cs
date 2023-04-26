@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
 {
 
     public bool canTripleShot = false;
+    public bool speedBoost = false;
+
     //serialização: permite que uma variavel privada seja vista no inspetor
     [SerializeField]
     private GameObject _laserPrefab;
@@ -58,8 +60,18 @@ public class Player : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
-        transform.Translate(Vector3.right * horizontalInput  * _velocidade * Time.deltaTime );  
-        transform.Translate(Vector3.up * verticalInput  * _velocidade * Time.deltaTime );  
+        if(speedBoost == true)
+        {
+            transform.Translate(Vector3.right * horizontalInput  * _velocidade * 2f * Time.deltaTime );  
+            transform.Translate(Vector3.up * verticalInput  * _velocidade * 2f * Time.deltaTime ); 
+        }
+        else 
+        {
+           transform.Translate(Vector3.right * horizontalInput  * _velocidade * Time.deltaTime );  
+           transform.Translate(Vector3.up * verticalInput  * _velocidade * Time.deltaTime ); 
+        }
+         
+        
         
         if(transform.position.y >5f){
             transform.position = new Vector3(transform.position.x,-5f,0);
@@ -80,6 +92,17 @@ public class Player : MonoBehaviour
     {
         canTripleShot = true;
         StartCoroutine(TripleShotPowerDownRoutine());
+    }
+
+    public void SpeedBoostPowerupOn(){
+        speedBoost = true;
+        StartCoroutine(SpeedBoostPowerupDownRoutine());
+    }
+
+    public IEnumerator SpeedBoostPowerupDownRoutine()
+    {
+        yield return new WaitForSeconds(5.0f);
+        speedBoost = false;  
     }
 
     public IEnumerator TripleShotPowerDownRoutine()
