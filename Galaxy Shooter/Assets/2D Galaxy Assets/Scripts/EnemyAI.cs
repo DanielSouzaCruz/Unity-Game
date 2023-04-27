@@ -16,9 +16,9 @@ public class EnemyAI : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.down * _enemySpeed * Time.deltaTime);
-        if(transform.position.y < -11f)
+        if(transform.position.y < -9f)
         {
-            
+            transform.position = new Vector3(Random.Range(-8.0f,8.0f),9f,0);
         }
         
     }
