@@ -22,6 +22,8 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float _velocidade = 5.0f;
 
+    public int playerLive = 2;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -88,6 +90,7 @@ public class Player : MonoBehaviour
         }
     }
 
+
     public void TripleShotPowerupOn()
     {
         canTripleShot = true;
@@ -109,5 +112,15 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(5.0f);
         canTripleShot = false;
+    }
+
+    public void Damage()
+    {
+        playerLive--;
+
+        if(playerLive < 1)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

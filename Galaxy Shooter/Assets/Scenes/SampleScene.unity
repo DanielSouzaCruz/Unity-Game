@@ -489,12 +489,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 411af0dbe46c592499598a0b1be2c31e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canTripleShot: 0
+  canTripleShot: 1
   speedBoost: 0
   _laserPrefab: {fileID: 2289836766698497864, guid: 1a3170827a82da6449db44e59f7ff10b, type: 3}
   _tripleShotPrefab: {fileID: 8426000700113267779, guid: a3f7b012e28d8c04ea0c472a601b2507, type: 3}
   _fireRate: 0.25
   _velocidade: 5
+  playerLive: 2
 --- !u!61 &2095822147
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -653,10 +654,6 @@ PrefabInstance:
     - target: {fileID: 5141293669057915131, guid: 5e40f3f122d5389479838e0f2491c97e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5978706927357937440, guid: 5e40f3f122d5389479838e0f2491c97e, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e40f3f122d5389479838e0f2491c97e, type: 3}
