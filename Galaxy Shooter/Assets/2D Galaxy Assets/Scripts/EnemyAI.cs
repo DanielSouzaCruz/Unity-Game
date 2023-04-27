@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour
 {
     [SerializeField]
-    private float _enemySpeed = 4f;
+    private float _enemySpeed = 5f;
 
     void Start()
     {
@@ -18,7 +18,9 @@ public class EnemyAI : MonoBehaviour
         transform.Translate(Vector3.down * _enemySpeed * Time.deltaTime);
         if(transform.position.y < -9f)
         {
-            transform.position = new Vector3(Random.Range(-8.0f,8.0f),9f,0);
+            //lembrar de utilizar variaveis para o codigo ficar mais limpo, o meu codigo estava certo apenas não estava "bonito"
+            float randomX = Random.Range(-8f,8f);
+            transform.position = new Vector3(randomX,9f,0);
         }
         
     }
