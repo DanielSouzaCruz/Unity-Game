@@ -491,6 +491,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canTripleShot: 0
   speedBoost: 0
+  shieldExtra: 0
   _playerExplosionPrefab: {fileID: 2121228784866186473, guid: 614b7ccb9aaf9f64c8e5357ebc0925d5, type: 3}
   _laserPrefab: {fileID: 2289836766698497864, guid: 1a3170827a82da6449db44e59f7ff10b, type: 3}
   _tripleShotPrefab: {fileID: 8426000700113267779, guid: a3f7b012e28d8c04ea0c472a601b2507, type: 3}
@@ -658,6 +659,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e40f3f122d5389479838e0f2491c97e, type: 3}
+--- !u!1001 &7642728525583759629
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2405629607679395486, guid: 73ee41e8a02cae641bc41a2a8de08819, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405629607679395486, guid: 73ee41e8a02cae641bc41a2a8de08819, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405629607679395486, guid: 73ee41e8a02cae641bc41a2a8de08819, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405629607679395486, guid: 73ee41e8a02cae641bc41a2a8de08819, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405629607679395486, guid: 73ee41e8a02cae641bc41a2a8de08819, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405629607679395486, guid: 73ee41e8a02cae641bc41a2a8de08819, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405629607679395486, guid: 73ee41e8a02cae641bc41a2a8de08819, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405629607679395486, guid: 73ee41e8a02cae641bc41a2a8de08819, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405629607679395486, guid: 73ee41e8a02cae641bc41a2a8de08819, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405629607679395486, guid: 73ee41e8a02cae641bc41a2a8de08819, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2405629607679395486, guid: 73ee41e8a02cae641bc41a2a8de08819, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5061100119108221614, guid: 73ee41e8a02cae641bc41a2a8de08819, type: 3}
+      propertyPath: m_Name
+      value: Shield_Powerup
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 73ee41e8a02cae641bc41a2a8de08819, type: 3}
 --- !u!1001 &8606627367944855591
 PrefabInstance:
   m_ObjectHideFlags: 0

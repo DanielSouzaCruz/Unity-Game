@@ -36,6 +36,10 @@ public class Powerup : MonoBehaviour
                 {
                   player.SpeedBoostPowerupOn();   
                 }
+                else if(_powerupID == 2)
+                {
+                    player.ShieldExtraPowerupOn();
+                }
                
             }
 

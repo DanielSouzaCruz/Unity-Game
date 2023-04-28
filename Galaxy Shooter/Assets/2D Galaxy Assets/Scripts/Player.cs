@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 
     public bool canTripleShot = false;
     public bool speedBoost = false;
+    public bool shieldExtra = false;
 
     //serialização: permite que uma variavel privada seja vista no inspetor
     [SerializeField]
@@ -104,6 +105,12 @@ public class Player : MonoBehaviour
         StartCoroutine(SpeedBoostPowerupDownRoutine());
     }
 
+    public void ShieldExtraPowerupOn()
+    {
+        shieldExtra = true;
+    }
+
+
     public IEnumerator SpeedBoostPowerupDownRoutine()
     {
         yield return new WaitForSeconds(5.0f);
@@ -118,6 +125,12 @@ public class Player : MonoBehaviour
 
     public void Damage()
     {
+        if(shieldExtra == true)
+        {
+            shieldExtra = false;
+            // metodo para dizer que quando a habilidade for false, ele retorna a damage ao normal
+            return;
+        }
         playerLive--;
 
         if(playerLive < 1)
