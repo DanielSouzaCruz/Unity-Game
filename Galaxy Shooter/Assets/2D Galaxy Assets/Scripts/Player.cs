@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
 
     //serialização: permite que uma variavel privada seja vista no inspetor
     [SerializeField]
+    private GameObject _playerExplosionPrefab;
+    [SerializeField]
     private GameObject _laserPrefab;
     [SerializeField]
     private GameObject _tripleShotPrefab;
@@ -22,7 +24,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float _velocidade = 5.0f;
 
-    public int playerLive = 2;
+    public int playerLive = 1;
 
     // Start is called before the first frame update
     private void Start()
@@ -121,6 +123,7 @@ public class Player : MonoBehaviour
         if(playerLive < 1)
         {
             Destroy(this.gameObject);
+            Instantiate(_playerExplosionPrefab, transform.position,Quaternion.identity);
         }
     }
 }
