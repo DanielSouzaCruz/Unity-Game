@@ -16,6 +16,8 @@ public class Player : MonoBehaviour
     private GameObject _laserPrefab;
     [SerializeField]
     private GameObject _tripleShotPrefab;
+    [SerializeField]
+    private GameObject _shieldGameObject;
 
     [SerializeField]
     private float _fireRate = 0.25f;
@@ -108,6 +110,7 @@ public class Player : MonoBehaviour
     public void ShieldExtraPowerupOn()
     {
         shieldExtra = true;
+        _shieldGameObject.SetActive(true);
     }
 
 
@@ -128,6 +131,7 @@ public class Player : MonoBehaviour
         if(shieldExtra == true)
         {
             shieldExtra = false;
+            _shieldGameObject.SetActive(false);
             // metodo para dizer que quando a habilidade for false, ele retorna a damage ao normal
             return;
         }
