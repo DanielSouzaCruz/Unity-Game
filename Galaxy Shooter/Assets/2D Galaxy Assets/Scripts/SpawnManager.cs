@@ -14,6 +14,7 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         StartCoroutine(EnemySpawnRoutine());
+        StartCoroutine(PlayerSpawnRoutine());
     }
 
     // Update is called once per frame
@@ -24,5 +25,16 @@ public class SpawnManager : MonoBehaviour
             Instantiate(enemyShipPrefab, new Vector3(Random.Range(-7f,7f),7,0), Quaternion.identity);
             yield return new WaitForSeconds(5.0f);
         }
+    }
+
+    IEnumerator PlayerSpawnRoutine()
+    {
+        while(true)
+        {
+            int randomPowerup = Random.Range(0,3);
+            Instantiate(powerups[randomPowerup],new Vector3(Random.Range(-7f,7f),7,0), Quaternion.identity);
+            yield return new WaitForSeconds(5.0f); 
+        }
+        
     }
 }
