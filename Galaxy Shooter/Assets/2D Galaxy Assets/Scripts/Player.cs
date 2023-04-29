@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float _velocidade = 5.0f;
 
-    public int playerLive = 1;
+    public int playerLive = 3;
 
     // Start is called before the first frame update
     private void Start()

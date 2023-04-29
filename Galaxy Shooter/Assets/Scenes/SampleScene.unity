@@ -654,7 +654,7 @@ MonoBehaviour:
   _shieldGameObject: {fileID: 378549540}
   _fireRate: 0.25
   _velocidade: 5
-  playerLive: 1
+  playerLive: 3
 --- !u!61 &2095822147
 BoxCollider2D:
   m_ObjectHideFlags: 0
