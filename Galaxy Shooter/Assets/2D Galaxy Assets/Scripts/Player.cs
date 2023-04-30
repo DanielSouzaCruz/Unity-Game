@@ -27,12 +27,21 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float _velocidade = 5.0f;
 
+    private UIManager _uiManager;
+
     public int playerLive = 3;
 
     // Start is called before the first frame update
     private void Start()
     {
         transform.position = new Vector3(0,0,0);
+
+        _uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
+
+        if(_uiManager != null)
+        {
+            _uiManager.UpdateLives(playerLive);
+        }
     }
 
     // Update is called once per frame
@@ -136,6 +145,7 @@ public class Player : MonoBehaviour
             return;
         }
         playerLive--;
+        _uiManager.UpdateLives(playerLive);
 
         if(playerLive < 1)
         {
