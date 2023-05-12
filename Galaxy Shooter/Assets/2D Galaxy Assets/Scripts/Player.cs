@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
     private float _velocidade = 5.0f;
 
     private UIManager _uiManager;
+    private GameController _gameController;
 
     public int playerLive = 3;
 
@@ -37,6 +38,7 @@ public class Player : MonoBehaviour
         transform.position = new Vector3(0,0,0);
 
         _uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
+        _gameController = GameObject.Find("GameController").GetComponent<GameController>();
 
         if(_uiManager != null)
         {
@@ -150,6 +152,8 @@ public class Player : MonoBehaviour
         if(playerLive < 1)
         {
             Destroy(this.gameObject);
+            _gameController.gameOver = true;
+            _uiManager.ShowTitleScreen();
             Instantiate(_playerExplosionPrefab, transform.position,Quaternion.identity);
         }
     }

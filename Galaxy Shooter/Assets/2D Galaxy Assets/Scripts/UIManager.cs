@@ -9,6 +9,8 @@ public class UIManager : MonoBehaviour
 
     public Sprite[] lives;
     public Image livesImageDisplay;
+
+    public GameObject tittleScreen;
     public TextMeshProUGUI pontuacaoTexto;
     public int pontuacao;
 
@@ -23,5 +25,16 @@ public class UIManager : MonoBehaviour
     {
         pontuacao +=10;
         pontuacaoTexto.text = "Score: " + pontuacao;
+    }
+
+    public void ShowTitleScreen()
+    {
+        tittleScreen.SetActive(true);
+    }
+
+    public void HideTitleScreen()
+    {
+        tittleScreen.SetActive(false);
+        pontuacaoTexto.text = "Score: ";
     }
 }
