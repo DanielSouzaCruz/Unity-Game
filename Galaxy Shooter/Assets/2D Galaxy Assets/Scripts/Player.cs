@@ -29,6 +29,7 @@ public class Player : MonoBehaviour
 
     private UIManager _uiManager;
     private GameController _gameController;
+    private SpawnManager _spawnManager;
 
     public int playerLive = 3;
 
@@ -39,10 +40,16 @@ public class Player : MonoBehaviour
 
         _uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
         _gameController = GameObject.Find("GameController").GetComponent<GameController>();
+        _spawnManager = GameObject.Find("Spawn_Manager").GetComponent<SpawnManager>();
 
         if(_uiManager != null)
         {
             _uiManager.UpdateLives(playerLive);
+        }
+
+        if(_spawnManager != null)
+        {
+            _spawnManager.StartSpawnRoutines();
         }
     }
 
