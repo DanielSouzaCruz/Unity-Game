@@ -9,6 +9,9 @@ public class Powerup : MonoBehaviour
 
     [SerializeField]
     private int _powerupID;
+
+    [SerializeField]
+    private AudioClip _clip;
     // Start is called before the first frame update
 
     // Update is called once per frame
@@ -30,6 +33,7 @@ public class Powerup : MonoBehaviour
         {
             // acessa o player, o primeiro nome e o nome <> devem ser iguais
             Player player = other.GetComponent<Player>();
+            AudioSource.PlayClipAtPoint(_clip, Camera.main.transform.position, 1f);
             // habilita o tiro triplo e verifica se o player foi achado
             if(player != null)
             {

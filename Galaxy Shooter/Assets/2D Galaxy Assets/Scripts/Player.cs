@@ -25,11 +25,12 @@ public class Player : MonoBehaviour
     private float _nextFire = 0.0f;
 
     [SerializeField]
-    private float _velocidade = 5.0f;
+    private float _velocidade = 6.0f;
 
     private UIManager _uiManager;
     private GameController _gameController;
     private SpawnManager _spawnManager;
+    private AudioSource _audioSource;
 
     public int playerLive = 3;
 
@@ -51,6 +52,8 @@ public class Player : MonoBehaviour
         {
             _spawnManager.StartSpawnRoutines();
         }
+
+        _audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -68,6 +71,7 @@ public class Player : MonoBehaviour
     {
         if(Time.time > _nextFire)
             {
+                _audioSource.Play();
                 if(canTripleShot == true){
                     Instantiate(_tripleShotPrefab, transform.position, Quaternion.identity);
                 }

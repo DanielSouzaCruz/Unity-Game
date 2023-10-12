@@ -126,3 +126,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyExplosionPrefab: {fileID: 671762713118998149, guid: c7640efb6542e7f41a09a268f925eafa, type: 3}
   _enemySpeed: 5
+  _clip: {fileID: 8300000, guid: a885c043fab7e46438bba03ba9dab6bc, type: 3}
