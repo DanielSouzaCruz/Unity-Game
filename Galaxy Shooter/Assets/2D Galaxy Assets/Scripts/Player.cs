@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
     private GameObject _tripleShotPrefab;
     [SerializeField]
     private GameObject _shieldGameObject;
+    [SerializeField]
+    private GameObject[] _engines;
 
     [SerializeField]
     private float _fireRate = 0.25f;
@@ -26,6 +28,8 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private float _velocidade = 6.0f;
+
+    private int hitCount = 0;
 
     private UIManager _uiManager;
     private GameController _gameController;
@@ -54,6 +58,8 @@ public class Player : MonoBehaviour
         }
 
         _audioSource = GetComponent<AudioSource>();
+
+        hitCount = 0;
     }
 
     // Update is called once per frame
@@ -150,6 +156,7 @@ public class Player : MonoBehaviour
 
     public void Damage()
     {
+        
         if(shieldExtra == true)
         {
             shieldExtra = false;
@@ -157,6 +164,18 @@ public class Player : MonoBehaviour
             // metodo para dizer que quando a habilidade for false, ele retorna a damage ao normal
             return;
         }
+
+        hitCount++;
+
+        if(hitCount == 1)
+        {
+            _engines[0].SetActive(true);
+        }
+        else if (hitCount == 2)
+        {
+            _engines[1].SetActive(true);
+        }
+        
         playerLive--;
         _uiManager.UpdateLives(playerLive);
 
