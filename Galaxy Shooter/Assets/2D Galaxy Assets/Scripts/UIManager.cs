@@ -23,7 +23,7 @@ public class UIManager : MonoBehaviour
 
     public void UpdateScore()
     {
-        pontuacao +=10;
+        pontuacao += 10;
         pontuacaoTexto.text = "Score: " + pontuacao;
     }
 
@@ -36,5 +36,6 @@ public class UIManager : MonoBehaviour
     {
         tittleScreen.SetActive(false);
         pontuacaoTexto.text = "Score: ";
+        pontuacao = 0;
     }
 }

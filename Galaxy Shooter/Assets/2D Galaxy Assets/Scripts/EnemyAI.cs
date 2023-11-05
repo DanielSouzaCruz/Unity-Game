@@ -10,13 +10,13 @@ public class EnemyAI : MonoBehaviour
     [SerializeField]
     private float _enemySpeed = 5f;
 
-    private UIManager _UiManager;
+    private UIManager _uiManager;
     [SerializeField]
     private AudioClip _clip;
 
     void Start()
     {
-        _UiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
+        _uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
     }
 
     // Update is called once per frame
@@ -27,7 +27,7 @@ public class EnemyAI : MonoBehaviour
         {
             //lembrar de utilizar variaveis para o codigo ficar mais limpo, o meu codigo estava certo apenas não estava "bonito"
             float randomX = Random.Range(-8f,8f);
-            transform.position = new Vector3(randomX,9f,0);
+            transform.position = new Vector3(randomX,8f,0);
         }
         
     }
@@ -42,7 +42,7 @@ public class EnemyAI : MonoBehaviour
             }
             Destroy(other.gameObject);
             Instantiate(_enemyExplosionPrefab, transform.position,Quaternion.identity);
-            _UiManager.UpdateScore();
+            _uiManager.UpdateScore();
             AudioSource.PlayClipAtPoint(_clip, Camera.main.transform.position, 1f);
             Destroy(this.gameObject);    
         }
