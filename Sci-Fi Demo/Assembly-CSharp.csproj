@@ -60,8 +60,10 @@
     <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\Utility\DynamicShadowSettings.cs" />
     <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\CrossPlatformInput\Scripts\ButtonHandler.cs" />
     <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\Utility\LerpControlledBob.cs" />
+    <Compile Include="Assets\Game\Scripts\Player.cs" />
     <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\Utility\PlatformSpecificContent.cs" />
     <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\CrossPlatformInput\Scripts\VirtualInput.cs" />
+    <Compile Include="Assets\Game\Scripts\LookY.cs" />
     <Compile Include="Assets\Game\Level_Dont_Touch\Environment_Model\Effects\hit_marker_particle\Scripts\AfterburnerPhysicsForce.cs" />
     <Compile Include="Assets\Game\Level_Dont_Touch\Environment_Model\Effects\hit_marker_particle\Scripts\ExplosionPhysicsForce.cs" />
     <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\Utility\TimedObjectActivator.cs" />
@@ -79,6 +81,7 @@
     <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\Utility\FPSCounter.cs" />
     <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\Utility\SimpleActivatorMenu.cs" />
     <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" />
+    <Compile Include="Assets\Game\Scripts\LookX.cs" />
     <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\Utility\SimpleMouseRotator.cs" />
     <Compile Include="Assets\Game\Level_Dont_Touch\Environment_Model\Effects\hit_marker_particle\Scripts\ExplosionFireAndDebris.cs" />
     <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\Utility\SmoothFollow.cs" />
@@ -110,9 +113,6 @@
     <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\Characters\RollerBall\Scripts\BallUserControl.cs" />
     <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
     <Compile Include="Assets\Game\Level_Dont_Touch\Environment_Model\Effects\hit_marker_particle\Scripts\Hose.cs" />
-    <Compile Include="Assets\Game\Scripts\Player.cs" />
-    <Compile Include="Assets\Game\Scripts\LookX.cs" />
-    <Compile Include="Assets\Game\Scripts\LookY.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Game\Level_Dont_Touch\Environment_Model\Cinema Suite\Cinema Themes\ReadMe.txt" />
