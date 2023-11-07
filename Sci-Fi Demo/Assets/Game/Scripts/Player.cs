@@ -22,17 +22,23 @@ public class Player : MonoBehaviour
 
         if(Input.GetMouseButtonDown(0))
         {
-            Ray rayOrigin = Camera.main.ScreenPointToRay(new Vector3 (Screen.width /2f, Screen.height /2f, 0));
+            Ray rayOrigin = Camera.main.ViewportPointToRay(new Vector3 (0.5f, 0.5f, 0));
+            RaycastHit hitInfo;
 
-            if (Physics.Raycast(rayOrigin, Mathf.Infinity))
+            if (Physics.Raycast(rayOrigin, out hitInfo))
             {
-                Debug.Log("RayCast acertou algo!");
+                Debug.Log("hit:" + hitInfo.transform.name);
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
 
 
         CalculateMovement();
-        showCursor();
     }
 
     void CalculateMovement()
@@ -44,14 +50,5 @@ public class Player : MonoBehaviour
         velocity.y -= _gravity;
         velocity = transform.transform.TransformDirection(velocity);
         _controller.Move(velocity * Time.deltaTime);
-    }
-
-    void showCursor()
-    {
-       if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-        } 
     }
 }
