@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     private float _gravity = 9.81f;
     [SerializeField]
     private GameObject _muzzleFlash;
+    [SerializeField]
+    private GameObject _hitMarkerPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +34,7 @@ public class Player : MonoBehaviour
             if (Physics.Raycast(rayOrigin, out hitInfo))
             {
                 Debug.Log("hit:" + hitInfo.transform.name);
+                Instantiate(_hitMarkerPrefab, hitInfo.point, Quaternion.LookRotation(hitInfo.normal));
             }
         }
 
