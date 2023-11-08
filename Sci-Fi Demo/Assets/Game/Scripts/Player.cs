@@ -18,6 +18,9 @@ public class Player : MonoBehaviour
     [SerializeField]
     private int _currentAmmo;
     private int _maxAmmo = 50;
+
+    private UIManager _uiManager;
+
     private bool _isRealoading = false;
 
     // Start is called before the first frame update
@@ -27,6 +30,8 @@ public class Player : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         _currentAmmo = _maxAmmo;
+
+        _uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
     }
 
     // Update is called once per frame
@@ -63,6 +68,7 @@ public class Player : MonoBehaviour
     {
         _muzzleFlash.SetActive(true);
         _currentAmmo--;
+        _uiManager.UpdateAmmo(_currentAmmo);
         if (_weaponSound.isPlaying == false)
         {
             _weaponSound.Play();
@@ -82,6 +88,7 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(1.5f);
         _currentAmmo = _maxAmmo;
+        _uiManager.UpdateAmmo(_currentAmmo);
         _isRealoading = false;
     }
     void CalculateMovement()
