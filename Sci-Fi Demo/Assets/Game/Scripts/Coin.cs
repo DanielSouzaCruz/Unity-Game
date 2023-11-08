@@ -1,18 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private AudioClip _coinPickUp;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerStay(Collider other)
     {
-        
+        if(other.tag == "Player")
+        {
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+                Player player = other.GetComponent<Player>();
+                if(player != null)
+                {
+                    player.hasCoin = true;
+                    AudioSource.PlayClipAtPoint(_coinPickUp, transform.position, 1f);
+                    Destroy(this.gameObject);
+                }
+            }
+        }
     }
 }
