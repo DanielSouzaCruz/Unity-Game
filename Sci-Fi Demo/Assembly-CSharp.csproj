@@ -114,6 +114,7 @@
     <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\Characters\RollerBall\Scripts\BallUserControl.cs" />
     <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
     <Compile Include="Assets\Game\Level_Dont_Touch\Environment_Model\Effects\hit_marker_particle\Scripts\Hose.cs" />
+    <Compile Include="Assets\Game\Scripts\Coin.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
