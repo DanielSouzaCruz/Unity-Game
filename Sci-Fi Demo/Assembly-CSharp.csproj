@@ -94,10 +94,12 @@
     <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\Utility\DragRigidbody.cs" />
     <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\StandaloneInput.cs" />
     <Compile Include="Assets\Game\Level_Dont_Touch\Environment_Model\Effects\hit_marker_particle\Scripts\FireLight.cs" />
+    <Compile Include="Assets\Game\Scripts\SharkShop.cs" />
     <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\Utility\FollowTarget.cs" />
     <Compile Include="Assets\Game\Level_Dont_Touch\Environment_Model\Effects\hit_marker_particle\Scripts\ExtinguishableParticleSystem.cs" />
     <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\Utility\ForcedReset.cs" />
     <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\Utility\ParticleSystemDestroyer.cs" />
+    <Compile Include="Assets\Game\Scripts\Destructable.cs" />
     <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\Utility\ObjectResetter.cs" />
     <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\Utility\AutoMobileShaderSwitch.cs" />
     <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\Characters\ThirdPersonCharacter\Scripts\AICharacterControl.cs" />
@@ -115,7 +117,6 @@
     <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\Characters\RollerBall\Scripts\BallUserControl.cs" />
     <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
     <Compile Include="Assets\Game\Level_Dont_Touch\Environment_Model\Effects\hit_marker_particle\Scripts\Hose.cs" />
-    <Compile Include="Assets\Game\Scripts\SharkShop.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

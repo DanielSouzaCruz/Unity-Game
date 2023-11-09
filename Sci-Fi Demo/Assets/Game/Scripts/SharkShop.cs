@@ -24,6 +24,7 @@ public class SharkShop : MonoBehaviour
                         }
                         AudioSource sharkAudio = GetComponent<AudioSource>();
                         sharkAudio.Play();
+                        player.EnableWeapons();
                     }
                     else
                     {

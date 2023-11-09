@@ -18,10 +18,12 @@ public class Player : MonoBehaviour
     [SerializeField]
     private int _currentAmmo;
     private int _maxAmmo = 50;
-
-    private UIManager _uiManager;
-
     private bool _isRealoading = false;
+    private UIManager _uiManager;
+    [SerializeField]
+    private GameObject _weapon;
+
+   
     public bool hasCoin = false;
 
     // Start is called before the first frame update
@@ -82,6 +84,12 @@ public class Player : MonoBehaviour
             Debug.Log("hit:" + hitInfo.transform.name);
             GameObject hitMarker = Instantiate(_hitMarkerPrefab, hitInfo.point, Quaternion.LookRotation(hitInfo.normal)) as GameObject;
             Destroy(hitMarker, 1f);
+
+            Destructable crate = hitInfo.transform.GetComponent<Destructable>();
+            if(crate != null )
+            {
+                crate.DestroyCrate();
+            }
         }
     }
 
@@ -101,5 +109,10 @@ public class Player : MonoBehaviour
         velocity.y -= _gravity;
         velocity = transform.transform.TransformDirection(velocity);
         _controller.Move(velocity * Time.deltaTime);
+    }
+
+    public void EnableWeapons()
+    {
+        _weapon.SetActive(true);
     }
 }
