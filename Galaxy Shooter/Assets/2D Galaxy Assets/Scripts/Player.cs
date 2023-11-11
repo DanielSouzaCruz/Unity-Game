@@ -41,8 +41,6 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        transform.position = new Vector3(0,0,0);
-
         _uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
         _gameController = GameObject.Find("GameController").GetComponent<GameController>();
         _spawnManager = GameObject.Find("Spawn_Manager").GetComponent<SpawnManager>();
@@ -52,10 +50,16 @@ public class Player : MonoBehaviour
             _uiManager.UpdateLives(playerLive);
         }
 
-        if(_spawnManager != null)
+        /*if (_spawnManager != null)
         {
             _spawnManager.StartSpawnRoutines();
+        }*/
+
+        if (_gameController.isCoopMode == false)
+        {
+            transform.position = new Vector3(0, 0, 0);
         }
+
 
         _audioSource = GetComponent<AudioSource>();
 

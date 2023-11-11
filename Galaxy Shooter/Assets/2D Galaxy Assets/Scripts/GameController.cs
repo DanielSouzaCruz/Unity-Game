@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    
+    public bool isCoopMode = false;   
     public bool gameOver = true;
     public GameObject player;
+    private SpawnManager _spawnManager;
 
     private UIManager _uiManager;
 
     private void Start()
     {
         _uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
+        _spawnManager = GameObject.Find("Spawn_Manager").GetComponent<SpawnManager>();
     }
 
     void Update()
@@ -24,6 +26,7 @@ public class GameController : MonoBehaviour
                 Instantiate(player, Vector3.zero, Quaternion.identity);
                 gameOver = false;
                 _uiManager.HideTitleScreen();
+                _spawnManager.StartSpawnRoutines();
             }
         }       
     }
