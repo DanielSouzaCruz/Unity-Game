@@ -427,6 +427,8 @@ MonoBehaviour:
   canTripleShot: 0
   speedBoost: 0
   shieldExtra: 0
+  isPlayerOne: 1
+  isPlayerTwo: 0
   _playerExplosionPrefab: {fileID: 2121228784866186473, guid: 614b7ccb9aaf9f64c8e5357ebc0925d5, type: 3}
   _laserPrefab: {fileID: 2289836766698497864, guid: 1a3170827a82da6449db44e59f7ff10b, type: 3}
   _tripleShotPrefab: {fileID: 8426000700113267779, guid: a3f7b012e28d8c04ea0c472a601b2507, type: 3}

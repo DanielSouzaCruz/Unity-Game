@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     public bool canTripleShot = false;
     public bool speedBoost = false;
     public bool shieldExtra = false;
+    public bool isPlayerOne = false;
+    public bool isPlayerTwo = false;
 
     //serialização: permite que uma variavel privada seja vista no inspetor
     [SerializeField]
@@ -69,12 +71,26 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        // obs: A cada frame, este codigo vai ser chamado
-        Movement();
-
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButton(0)){
-            Shoot();
+        if (isPlayerOne == true)
+        {
+            Movement();
+            // obs: A cada frame, este codigo vai ser chamado
+            if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButton(0)) && isPlayerOne == true)
+            {
+                Shoot();
+            }
         }
+
+        if (isPlayerTwo == true)
+        {
+            PlayerTwoMovement();
+            if (Input.GetKeyDown(KeyCode.KeypadEnter))
+            {
+                Shoot();
+            }
+
+        }
+
     }
 
     private void Shoot()
@@ -89,8 +105,8 @@ public class Player : MonoBehaviour
                     Instantiate(_laserPrefab, transform.position + new Vector3(0, 0.88f, 0), Quaternion.identity); 
               
                 }
-                 _nextFire = Time.time + _fireRate; 
-            }
+                 _nextFire = Time.time + _fireRate;
+        }
     }
 
     private void Movement()
@@ -99,31 +115,115 @@ public class Player : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
-        if(speedBoost == true)
+        if (speedBoost == true)
         {
-            transform.Translate(Vector3.right * horizontalInput  * _velocidade * 2f * Time.deltaTime );  
-            transform.Translate(Vector3.up * verticalInput  * _velocidade * 2f * Time.deltaTime ); 
+            transform.Translate(Vector3.right * horizontalInput * _velocidade * 2f * Time.deltaTime);
+            transform.Translate(Vector3.up * verticalInput * _velocidade * 2f * Time.deltaTime);
         }
-        else 
+        else
         {
-           transform.Translate(Vector3.right * horizontalInput  * _velocidade * Time.deltaTime );  
-           transform.Translate(Vector3.up * verticalInput  * _velocidade * Time.deltaTime ); 
-        }
-         
-        
-        
-        if(transform.position.y >4.2f){
-            transform.position = new Vector3(transform.position.x,4.2f,0);
-        }
-        else if(transform.position.y< -4.2f){
-            transform.position = new Vector3(transform.position.x,-4.2f,0);
+            transform.Translate(Vector3.right * horizontalInput * _velocidade * Time.deltaTime);
+            transform.Translate(Vector3.up * verticalInput * _velocidade * Time.deltaTime);
         }
 
-        if(transform.position.x< -8.32f){
-            transform.position = new Vector3(-8.32f,transform.position.y,0);
+
+
+        if (transform.position.y > 4.2f)
+        {
+            transform.position = new Vector3(transform.position.x, 4.2f, 0);
         }
-        else if(transform.position.x> 8.32f){
-            transform.position = new Vector3(8.32f, transform.position.y,0);
+        else if (transform.position.y < -4.2f)
+        {
+            transform.position = new Vector3(transform.position.x, -4.2f, 0);
+        }
+
+        if (transform.position.x < -8.32f)
+        {
+            transform.position = new Vector3(-8.32f, transform.position.y, 0);
+        }
+        else if (transform.position.x > 8.32f)
+        {
+            transform.position = new Vector3(8.32f, transform.position.y, 0);
+        }
+    }
+
+    private void PlayerTwoMovement()
+    {
+
+        if (Input.GetKey(KeyCode.Keypad8))
+        {
+            transform.Translate(Vector3.up * _velocidade * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.Keypad6))
+        {
+            transform.Translate(Vector3.right * _velocidade * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.Keypad2))
+        {
+            transform.Translate(Vector3.down * _velocidade * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.Keypad4))
+        {
+            transform.Translate(Vector3.left * _velocidade * Time.deltaTime);
+        }
+
+        if (speedBoost == true)
+        {
+            if (Input.GetKey(KeyCode.Keypad8))
+            {
+                transform.Translate(Vector3.up * _velocidade * 1.5f * Time.deltaTime);
+            }
+            if (Input.GetKey(KeyCode.Keypad6))
+            {
+                transform.Translate(Vector3.right * _velocidade * 1.5f * Time.deltaTime);
+            }
+            if (Input.GetKey(KeyCode.Keypad2))
+            {
+                transform.Translate(Vector3.down * _velocidade * 1.5f * Time.deltaTime);
+            }
+            if (Input.GetKey(KeyCode.Keypad4))
+            {
+                transform.Translate(Vector3.left * _velocidade * 1.5f * Time.deltaTime);
+            }
+        }
+        else
+        {
+            if (Input.GetKey(KeyCode.Keypad8))
+            {
+                transform.Translate(Vector3.up * _velocidade * Time.deltaTime);
+            }
+            if (Input.GetKey(KeyCode.Keypad6))
+            {
+                transform.Translate(Vector3.right * _velocidade * Time.deltaTime);
+            }
+            if (Input.GetKey(KeyCode.Keypad2))
+            {
+                transform.Translate(Vector3.down * _velocidade * Time.deltaTime);
+            }
+            if (Input.GetKey(KeyCode.Keypad4))
+            {
+                transform.Translate(Vector3.left * _velocidade * Time.deltaTime);
+            }
+        }
+
+
+
+        if (transform.position.y > 4.2f)
+        {
+            transform.position = new Vector3(transform.position.x, 4.2f, 0);
+        }
+        else if (transform.position.y < -4.2f)
+        {
+            transform.position = new Vector3(transform.position.x, -4.2f, 0);
+        }
+
+        if (transform.position.x < -8.32f)
+        {
+            transform.position = new Vector3(-8.32f, transform.position.y, 0);
+        }
+        else if (transform.position.x > 8.32f)
+        {
+            transform.position = new Vector3(8.32f, transform.position.y, 0);
         }
     }
 

@@ -23,7 +23,10 @@ public class GameController : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.Space))
             {
-                Instantiate(player, Vector3.zero, Quaternion.identity);
+                if(isCoopMode == false)
+                {
+                    Instantiate(player, Vector3.zero, Quaternion.identity);
+                }
                 gameOver = false;
                 _uiManager.HideTitleScreen();
                 _spawnManager.StartSpawnRoutines();
