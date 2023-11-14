@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638353016953188009
-    m_Hash: 1022914125
+      ticks: 638353244098916177
+    m_Hash: 313885377
   m_LockFileStatus:
     m_FilePath: C:/Unity-Game/Sci-Fi Demo/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638353016953227754
-    m_Hash: 306303778
+      ticks: 638353244098926306
+    m_Hash: 2319695882
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -30,6 +31,10 @@ public class GameController : MonoBehaviour
                 gameOver = false;
                 _uiManager.HideTitleScreen();
                 _spawnManager.StartSpawnRoutines();
+            }
+            else if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                SceneManager.LoadScene("Main_Menu");
             }
         }       
     }

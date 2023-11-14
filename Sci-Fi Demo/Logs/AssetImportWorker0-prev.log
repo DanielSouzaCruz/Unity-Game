@@ -15,7 +15,7 @@ C:/Unity-Game/Sci-Fi Demo
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-50014
+50521
 Successfully changed project path to: C:/Unity-Game/Sci-Fi Demo
 C:/Unity-Game/Sci-Fi Demo
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,11 +47,11 @@ C:/Unity-Game/Sci-Fi Demo
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [6368] Host "[IP] 192.168.100.2 [Port] 0 [Flags] 2 [Guid] 1254921373 [EditorId] 1254921373 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-KVKDK5EL) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [4476] Host "[IP] 192.168.100.2 [Port] 0 [Flags] 2 [Guid] 418325369 [EditorId] 418325369 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-KVKDK5EL) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [6368] Host "[IP] 192.168.100.2 [Port] 0 [Flags] 2 [Guid] 1254921373 [EditorId] 1254921373 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-KVKDK5EL) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [4476] Host "[IP] 192.168.100.2 [Port] 0 [Flags] 2 [Guid] 418325369 [EditorId] 418325369 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-KVKDK5EL) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 175.68 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 144.52 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.23f1 (213b516bf396)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.23f1/Editor/Data/Resources/UnitySubsystems
@@ -67,37 +67,37 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.23f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.23f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.23f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56200
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56092
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.23f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.014337 seconds.
+Registered in 0.009427 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 127.20 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 163.77 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.044 seconds
+- Completed reload, in  1.154 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1045ms)
-		BeginReloadAssembly (132ms)
+	ReloadAssembly (1155ms)
+		BeginReloadAssembly (136ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (739ms)
-			LoadAssemblies (128ms)
+		EndReloadAssembly (848ms)
+			LoadAssemblies (132ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (166ms)
+			SetupTypeCache (203ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (52ms)
-			SetupLoadedEditorAssemblies (439ms)
+			SetupLoadedEditorAssemblies (505ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (14ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (127ms)
+				RefreshPlugins (164ms)
 				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (214ms)
+				ProcessInitializeOnLoadAttributes (243ms)
 				ProcessInitializeOnLoadMethodAttributes (81ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
@@ -105,51 +105,51 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.006731 seconds.
+Registered in 0.009822 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Unity-Game\Sci-Fi Demo\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Unity-Game\Sci-Fi Demo\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.74 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.59 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.780 seconds
+- Completed reload, in  1.752 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1782ms)
-		BeginReloadAssembly (168ms)
+	ReloadAssembly (1753ms)
+		BeginReloadAssembly (195ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (9ms)
+			DisableScriptedObjects (10ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (26ms)
-		EndReloadAssembly (1445ms)
-			LoadAssemblies (120ms)
+			CreateAndSetChildDomain (25ms)
+		EndReloadAssembly (1362ms)
+			LoadAssemblies (144ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (452ms)
+			SetupTypeCache (485ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (92ms)
-			SetupLoadedEditorAssemblies (682ms)
+			RebuildScriptCaches (94ms)
+			SetupLoadedEditorAssemblies (594ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (12ms)
+				InitializePlatformSupportModulesInManaged (8ms)
 				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (165ms)
-				ProcessInitializeOnLoadAttributes (443ms)
-				ProcessInitializeOnLoadMethodAttributes (41ms)
-				AfterProcessingInitializeOnLoad (20ms)
+				BeforeProcessingInitializeOnLoad (156ms)
+				ProcessInitializeOnLoadAttributes (382ms)
+				ProcessInitializeOnLoadMethodAttributes (32ms)
+				AfterProcessingInitializeOnLoad (14ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (10ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 1.04 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.80 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3262 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 36 unused Assets / (1.3 MB). Loaded Objects now: 3719.
 Memory consumption went from 125.3 MB to 124.0 MB.
-Total: 4.305700 ms (FindLiveObjects: 0.342500 ms CreateObjectMapping: 0.303800 ms MarkObjects: 3.290400 ms  DeleteObjects: 0.368100 ms)
+Total: 3.092000 ms (FindLiveObjects: 0.287300 ms CreateObjectMapping: 0.196700 ms MarkObjects: 2.301400 ms  DeleteObjects: 0.305100 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -163,159 +163,109 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 2102.839402 seconds.
-  path: Assets/Game/Sci_Fi_PPF.asset
-  artifactKey: Guid(b3f20928f4152d547b827e9732b1541d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Sci_Fi_PPF.asset using Guid(b3f20928f4152d547b827e9732b1541d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8fd6f04e7d48cf231ff15418d8f360f') in 0.055933 seconds 
+  Time since last request: 3738.620124 seconds.
+  path: Assets/Game/Weapon_PPF.asset
+  artifactKey: Guid(73f01009792b8394990ef8b228fb15bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Weapon_PPF.asset using Guid(73f01009792b8394990ef8b228fb15bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '264b0c3b83811479fdc1c8efd119859f') in 0.041566 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 168.199655 seconds.
-  path: Assets/Game/Sci_Fi_PPF.asset
-  artifactKey: Guid(b3f20928f4152d547b827e9732b1541d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Sci_Fi_PPF.asset using Guid(b3f20928f4152d547b827e9732b1541d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b7294cab28bc0b1cdb1a74025b8e8cc') in 0.009976 seconds 
+  Time since last request: 65.419377 seconds.
+  path: Assets/Game/Weapon_PPF.asset
+  artifactKey: Guid(73f01009792b8394990ef8b228fb15bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Weapon_PPF.asset using Guid(73f01009792b8394990ef8b228fb15bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '392b0e6b1fbe3f17ba50313b64e727fe') in 0.004104 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 90.084263 seconds.
-  path: Assets/Game/Sci_Fi_PPF.asset
-  artifactKey: Guid(b3f20928f4152d547b827e9732b1541d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Sci_Fi_PPF.asset using Guid(b3f20928f4152d547b827e9732b1541d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7caf4b521e2931381e6e16e4095fff91') in 0.005623 seconds 
+  Time since last request: 32.861653 seconds.
+  path: Assets/Game/Weapon_PPF.asset
+  artifactKey: Guid(73f01009792b8394990ef8b228fb15bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Weapon_PPF.asset using Guid(73f01009792b8394990ef8b228fb15bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adacb9c2d28c051815368bb26eb7a13b') in 0.003579 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 103.761056 seconds.
-  path: Assets/Game/Sci_Fi_PPF.asset
-  artifactKey: Guid(b3f20928f4152d547b827e9732b1541d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Sci_Fi_PPF.asset using Guid(b3f20928f4152d547b827e9732b1541d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d5d5cb8c85c559b99ec70acb16e9059') in 0.006098 seconds 
+  Time since last request: 38.235406 seconds.
+  path: Assets/Game/Weapon_PPF.asset
+  artifactKey: Guid(73f01009792b8394990ef8b228fb15bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Weapon_PPF.asset using Guid(73f01009792b8394990ef8b228fb15bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1ad050bb4e73991bf602238dfae7d06') in 0.011687 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 213.148974 seconds.
-  path: Assets/Game/Sci_Fi_PPF.asset
-  artifactKey: Guid(b3f20928f4152d547b827e9732b1541d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Sci_Fi_PPF.asset using Guid(b3f20928f4152d547b827e9732b1541d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43b5f0933d7d8c8719bc1d856309218f') in 0.014111 seconds 
+  Time since last request: 39.925908 seconds.
+  path: Assets/Game/Weapon_PPF.asset
+  artifactKey: Guid(73f01009792b8394990ef8b228fb15bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Weapon_PPF.asset using Guid(73f01009792b8394990ef8b228fb15bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd860673f47e8bf7d36db49d592bff99d') in 0.004755 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 336.974255 seconds.
-  path: Assets/Game/Sci_Fi_PPF.asset
-  artifactKey: Guid(b3f20928f4152d547b827e9732b1541d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Sci_Fi_PPF.asset using Guid(b3f20928f4152d547b827e9732b1541d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6378e3f9656dbab82325294ee9fa3da5') in 0.006483 seconds 
+  Time since last request: 41.212688 seconds.
+  path: Assets/Game/Weapon_PPF.asset
+  artifactKey: Guid(73f01009792b8394990ef8b228fb15bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Weapon_PPF.asset using Guid(73f01009792b8394990ef8b228fb15bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83c70bd2f8debc0f37d28e6428fb9f93') in 0.004298 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 56.430889 seconds.
-  path: Assets/Game/Sci_Fi_PPF.asset
-  artifactKey: Guid(b3f20928f4152d547b827e9732b1541d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Sci_Fi_PPF.asset using Guid(b3f20928f4152d547b827e9732b1541d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50ac1ae58ca41dd710920aeda6c977fe') in 0.005461 seconds 
+  Time since last request: 202.352773 seconds.
+  path: Assets/Game/Weapon_PPF.asset
+  artifactKey: Guid(73f01009792b8394990ef8b228fb15bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Weapon_PPF.asset using Guid(73f01009792b8394990ef8b228fb15bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db3a21d4404fca2eff3d81bfef2e4e8c') in 0.003931 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 3.734644 seconds.
+  Time since last request: 4.912157 seconds.
+  path: Assets/Game/Weapon_PPF.asset
+  artifactKey: Guid(73f01009792b8394990ef8b228fb15bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Weapon_PPF.asset using Guid(73f01009792b8394990ef8b228fb15bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12a50831681efee567bd81f7a2c91c7f') in 0.003647 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 199.854409 seconds.
+  path: Assets/Game/Weapon_PPF.asset
+  artifactKey: Guid(73f01009792b8394990ef8b228fb15bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Weapon_PPF.asset using Guid(73f01009792b8394990ef8b228fb15bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4204332cc1e41dba292c6cae231c40b5') in 0.004785 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 110.058664 seconds.
   path: Assets/Game/Sci_Fi_PPF.asset
   artifactKey: Guid(b3f20928f4152d547b827e9732b1541d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Sci_Fi_PPF.asset using Guid(b3f20928f4152d547b827e9732b1541d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39c79d4f351277055e7e04df4cb7dc61') in 0.006028 seconds 
+Start importing Assets/Game/Sci_Fi_PPF.asset using Guid(b3f20928f4152d547b827e9732b1541d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3eedd92741f7306f4e4bf722d64a97d4') in 0.005873 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.008418 seconds.
+Registered in 0.006915 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Unity-Game\Sci-Fi Demo\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Unity-Game\Sci-Fi Demo\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.13 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.88 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.880 seconds
+- Completed reload, in  2.039 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1882ms)
-		BeginReloadAssembly (215ms)
+	ReloadAssembly (2041ms)
+		BeginReloadAssembly (254ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (9ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (52ms)
-		EndReloadAssembly (1503ms)
-			LoadAssemblies (139ms)
+			CreateAndSetChildDomain (59ms)
+		EndReloadAssembly (1612ms)
+			LoadAssemblies (163ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (489ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (84ms)
-			SetupLoadedEditorAssemblies (687ms)
+			SetupTypeCache (570ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (93ms)
+			SetupLoadedEditorAssemblies (699ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (13ms)
 				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (1ms)
 				BeforeProcessingInitializeOnLoad (150ms)
-				ProcessInitializeOnLoadAttributes (452ms)
-				ProcessInitializeOnLoadMethodAttributes (44ms)
-				AfterProcessingInitializeOnLoad (24ms)
+				ProcessInitializeOnLoadAttributes (467ms)
+				ProcessInitializeOnLoadMethodAttributes (45ms)
+				AfterProcessingInitializeOnLoad (22ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (14ms)
+			AwakeInstancesAfterBackupRestoration (15ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 4.40 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 3.78 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3212 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 29 unused Assets / (1.3 MB). Loaded Objects now: 3723.
 Memory consumption went from 120.5 MB to 119.2 MB.
-Total: 5.315400 ms (FindLiveObjects: 0.314600 ms CreateObjectMapping: 0.331300 ms MarkObjects: 4.321100 ms  DeleteObjects: 0.347200 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 414.093962 seconds.
-  path: Assets/Game/Weapon_PPF.asset
-  artifactKey: Guid(73f01009792b8394990ef8b228fb15bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Weapon_PPF.asset using Guid(73f01009792b8394990ef8b228fb15bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94a0c0f7fd114d2fc8175db17f9f66da') in 0.028079 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.007724 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Unity-Game\Sci-Fi Demo\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Unity-Game\Sci-Fi Demo\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.09 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.680 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1682ms)
-		BeginReloadAssembly (219ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (9ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (50ms)
-		EndReloadAssembly (1285ms)
-			LoadAssemblies (143ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (482ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (69ms)
-			SetupLoadedEditorAssemblies (520ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (12ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (112ms)
-				ProcessInitializeOnLoadAttributes (345ms)
-				ProcessInitializeOnLoadMethodAttributes (33ms)
-				AfterProcessingInitializeOnLoad (16ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (9ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 2.48 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3212 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 29 unused Assets / (1.3 MB). Loaded Objects now: 3726.
-Memory consumption went from 120.5 MB to 119.2 MB.
-Total: 3.947500 ms (FindLiveObjects: 0.365300 ms CreateObjectMapping: 0.531700 ms MarkObjects: 2.760400 ms  DeleteObjects: 0.288600 ms)
+Total: 4.870700 ms (FindLiveObjects: 0.344900 ms CreateObjectMapping: 0.251200 ms MarkObjects: 3.905600 ms  DeleteObjects: 0.367700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
