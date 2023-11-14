@@ -7,7 +7,10 @@ public class GameController : MonoBehaviour
 {
     public bool isCoopMode = false;   
     public bool gameOver = true;
-    public GameObject player;
+    [SerializeField]
+    private GameObject player;
+    [SerializeField]
+    private GameObject _coopPlayers;
     private SpawnManager _spawnManager;
 
     private UIManager _uiManager;
@@ -27,6 +30,10 @@ public class GameController : MonoBehaviour
                 if(isCoopMode == false)
                 {
                     Instantiate(player, Vector3.zero, Quaternion.identity);
+                }
+                else
+                {
+                    Instantiate(_coopPlayers, Vector3.zero, Quaternion.identity);
                 }
                 gameOver = false;
                 _uiManager.HideTitleScreen();
