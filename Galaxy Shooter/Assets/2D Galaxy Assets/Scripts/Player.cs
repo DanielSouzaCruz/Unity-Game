@@ -150,23 +150,6 @@ public class Player : MonoBehaviour
     private void PlayerTwoMovement()
     {
 
-        if (Input.GetKey(KeyCode.Keypad8))
-        {
-            transform.Translate(Vector3.up * _velocidade * Time.deltaTime);
-        }
-        if (Input.GetKey(KeyCode.Keypad6))
-        {
-            transform.Translate(Vector3.right * _velocidade * Time.deltaTime);
-        }
-        if (Input.GetKey(KeyCode.Keypad2))
-        {
-            transform.Translate(Vector3.down * _velocidade * Time.deltaTime);
-        }
-        if (Input.GetKey(KeyCode.Keypad4))
-        {
-            transform.Translate(Vector3.left * _velocidade * Time.deltaTime);
-        }
-
         if (speedBoost == true)
         {
             if (Input.GetKey(KeyCode.Keypad8))
