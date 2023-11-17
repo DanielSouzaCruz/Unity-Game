@@ -13,6 +13,9 @@ public class GameController : MonoBehaviour
     private GameObject _coopPlayers;
     private SpawnManager _spawnManager;
 
+    [SerializeField]
+    private GameObject _pauseMenuPanel;
+
     private UIManager _uiManager;
 
     private void Start()
@@ -43,6 +46,18 @@ public class GameController : MonoBehaviour
             {
                 SceneManager.LoadScene("Main_Menu");
             }
-        }       
+        }
+        
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            _pauseMenuPanel.SetActive(true);
+            Time.timeScale = 0;
+        }
+    }
+
+    public void ResumeGame()
+    {
+        _pauseMenuPanel.SetActive(false);
+        Time.timeScale = 1;
     }
 }

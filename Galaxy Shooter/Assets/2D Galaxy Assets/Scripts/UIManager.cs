@@ -17,7 +17,6 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     public void UpdateLives(int currentLives)
     {
-        Debug.Log("Player lives:" + currentLives);
         livesImageDisplay.sprite = lives[currentLives];
     }
 
@@ -37,5 +36,16 @@ public class UIManager : MonoBehaviour
         tittleScreen.SetActive(false);
         pontuacaoTexto.text = "Score: ";
         pontuacao = 0;
+    }
+
+    public void ResumePlay()
+    {
+        GameController gc = GameObject.Find("GameController").GetComponent<GameController>();
+        gc.ResumeGame();
+    }
+
+    public void BackToMainMenu()
+    {
+
     }
 }
