@@ -12,8 +12,8 @@ public class UIManager : MonoBehaviour
     public Image livesImageDisplay;
 
     public GameObject tittleScreen;
-    public TextMeshProUGUI pontuacaoTexto;
-    public int pontuacao;
+    public TextMeshProUGUI pontuacaoTexto, melhorPontuacaoTexto;
+    public int pontuacao, melhorPontuacao;
 
     // Start is called before the first frame update
     public void UpdateLives(int currentLives)
@@ -25,6 +25,15 @@ public class UIManager : MonoBehaviour
     {
         pontuacao += 10;
         pontuacaoTexto.text = "Score: " + pontuacao;
+    }
+
+    public void CheckBestScore()
+    {
+        if(pontuacao > melhorPontuacao)
+        {
+            melhorPontuacao = pontuacao;
+            melhorPontuacaoTexto.text = "Best: " + melhorPontuacao;
+        }
     }
 
     public void ShowTitleScreen()
