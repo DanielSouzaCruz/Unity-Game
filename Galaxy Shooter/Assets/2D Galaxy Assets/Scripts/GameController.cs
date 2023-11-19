@@ -18,10 +18,14 @@ public class GameController : MonoBehaviour
 
     private UIManager _uiManager;
 
+    private Animator _pauseAnimator;
+
     private void Start()
     {
         _uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
         _spawnManager = GameObject.Find("Spawn_Manager").GetComponent<SpawnManager>();
+        _pauseAnimator = GameObject.Find("Pause_Menu_Panel").GetComponent<Animator>();
+        _pauseAnimator.updateMode = AnimatorUpdateMode.UnscaledTime;
     }
 
     void Update()
@@ -51,6 +55,7 @@ public class GameController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.P))
         {
             _pauseMenuPanel.SetActive(true);
+            _pauseAnimator.SetBool("isPaused", true);
             Time.timeScale = 0;
         }
     }
