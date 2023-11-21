@@ -16,6 +16,12 @@ public class UIManager : MonoBehaviour
     public int pontuacao, melhorPontuacao;
 
     // Start is called before the first frame update
+    private void Start()
+    {
+        melhorPontuacao = PlayerPrefs.GetInt("HighScore", 0);
+        melhorPontuacaoTexto.text = "best:" + melhorPontuacao;
+    }
+
     public void UpdateLives(int currentLives)
     {
         livesImageDisplay.sprite = lives[currentLives];
@@ -32,6 +38,7 @@ public class UIManager : MonoBehaviour
         if(pontuacao > melhorPontuacao)
         {
             melhorPontuacao = pontuacao;
+            PlayerPrefs.SetInt("HighScore", melhorPontuacao);
             melhorPontuacaoTexto.text = "Best: " + melhorPontuacao;
         }
     }
